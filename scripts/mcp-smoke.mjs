@@ -41,7 +41,9 @@ try {
   const badTemplateFormula=await client.callTool({name:'eduapple_edit_template',arguments:{requestId:'00000000-0000-4000-8000-000000000000',templateId:'00000000-0000-4000-8000-000000000000',expectedRevision:'0'.repeat(64),outputName:'bad',changes:[{op:'set_cells',elementId:'c0_table0',cells:[{address:'B2',value:'=WEBSERVICE(1)'}]}]}});assert.ok(badTemplateFormula.isError);
   const badEdition=await client.callTool({name:'eduapple_doctor',arguments:{edition:'com.apple.finder'}});assert.ok(badEdition.isError);
   const progress=await client.callTool({name:'eduapple_progress',arguments:{}});assert.ok(!progress.isError);assert.equal(progress.structuredContent.release.version,pkg.version);assert.equal(progress.structuredContent.release.scope,'current_mac_iwork');assert.equal(progress.structuredContent.release.publicDistribution,'github');assert.equal(progress.structuredContent.features.find(f=>f.id==='UI-SITE').verification,'held');
-  const access=await client.callTool({name:'eduapple_creator_access',arguments:{app:'logic'}});assert.ok(!access.isError);
+  const access=await client.callTool({name:'eduapple_creator_access',arguments:{app:'logic'}});
+  if(process.platform==='darwin')assert.ok(!access.isError);
+  else{assert.ok(access.isError);assert.equal(JSON.parse(access.content.find(item=>item.type==='text').text).error.code,'UNSUPPORTED_PLATFORM');}
   const badCreator=await client.callTool({name:'eduapple_creator_request_permission',arguments:{app:'finder'}});assert.ok(badCreator.isError);
   for(const name of ['eduapple_studio_inspect','eduapple_studio_edit']){const args=name==='eduapple_studio_inspect'?{artifactId:'00000000-0000-4000-8000-000000000000'}:{};assert.ok((await client.callTool({name,arguments:args})).isError);}
   const studioSchema=JSON.stringify(listed.tools.find(t=>t.name==='eduapple_studio_create').inputSchema);for(const kind of ['pixelmator','pages_body','video','music','keynote_deck'])assert.ok(studioSchema.includes(kind));
