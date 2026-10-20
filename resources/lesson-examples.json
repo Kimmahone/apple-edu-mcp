@@ -1,0 +1,138 @@
+[
+  {
+    "edition": "creator_studio",
+    "schoolLevel": "elementary",
+    "grade": 5,
+    "subject": "과학",
+    "unit": "관찰과 설명",
+    "timeMinutes": 40,
+    "coreMessage": "관찰한 근거로 설명을 완성한다.",
+    "goals": [
+      "관찰한 점을 기록한다.",
+      "근거로 설명한다."
+    ],
+    "icebreaker": "두 그림에서 달라진 점을 찾아볼까요?",
+    "activities": [
+      {
+        "name": "관찰 기록",
+        "minutes": 12,
+        "instruction": "달라진 점을 두 가지 적으세요.",
+        "materials": "교사가 제공한 가상 관찰 자료",
+        "example": "색이 다르다. 왼쪽은 초록색이다.",
+        "blank": "관찰 / 근거 / 설명 빈 표",
+        "submitTo": "수업에서 정한 제출함",
+        "doneWhen": "관찰과 근거를 각각 두 가지 적으면 완료"
+      },
+      {
+        "name": "근거 설명",
+        "minutes": 12,
+        "instruction": "관찰과 근거를 한 문장으로 연결하세요.",
+        "materials": "앞 활동의 가상 관찰 기록",
+        "example": "초록색 부분이 넓어 초록이 더 많다고 설명했다.",
+        "blank": "관찰한 점은 ___이고 근거는 ___이다.",
+        "submitTo": "짝과 확인한 뒤 같은 제출함",
+        "doneWhen": "관찰한 점과 근거가 연결되면 완료"
+      }
+    ],
+    "assessment": [
+      "관찰한 점을 구체적으로 기록했는가?",
+      "설명이 관찰한 근거와 연결되는가?"
+    ],
+    "differentiation": [
+      "글쓰기가 어려우면 말로 먼저 설명한다."
+    ],
+    "scenario": "lesson",
+    "title": "가상 관찰 수업"
+  },
+  {
+    "edition": "creator_studio",
+    "schoolLevel": "elementary",
+    "grade": 5,
+    "subject": "사회",
+    "unit": "지역 탐구",
+    "timeMinutes": 40,
+    "coreMessage": "자료의 근거로 우리 동네를 설명한다.",
+    "goals": [
+      "자료에서 지역의 특징을 찾는다.",
+      "근거를 들어 지역을 설명한다."
+    ],
+    "icebreaker": "우리 동네를 한 단어로 표현해 볼까요?",
+    "activities": [
+      {
+        "name": "지역 자료 읽기",
+        "minutes": 12,
+        "instruction": "가상 지역 자료에서 특징 두 가지를 찾으세요.",
+        "materials": "교사가 만든 가상 지역 그림과 설명",
+        "example": "길 옆에 공원이 있어 걸어서 쉬기 좋다.",
+        "blank": "특징 / 자료의 근거 빈 표",
+        "submitTo": "수업에서 정한 탐구 모음함",
+        "doneWhen": "특징마다 자료의 근거를 연결하면 완료"
+      },
+      {
+        "name": "근거로 소개하기",
+        "minutes": 12,
+        "instruction": "찾은 근거로 가상 지역 소개 문장을 만드세요.",
+        "materials": "앞 활동의 가상 지역 기록",
+        "example": "공원과 도서관이 가까워 함께 이용하기 좋다.",
+        "blank": "우리 지역의 특징은 ___이며 근거는 ___이다.",
+        "submitTo": "짝과 확인한 뒤 탐구 모음함",
+        "doneWhen": "특징과 근거가 연결된 소개 문장을 쓰면 완료"
+      }
+    ],
+    "assessment": [
+      "자료에서 지역의 특징을 찾았는가?",
+      "소개 문장의 근거가 자료와 연결되는가?"
+    ],
+    "differentiation": [
+      "글쓰기가 어려우면 말로 먼저 설명한다."
+    ],
+    "scenario": "project",
+    "title": "가상 우리 동네 탐구"
+  },
+  {
+    "edition": "creator_studio",
+    "schoolLevel": "elementary",
+    "grade": 5,
+    "subject": "음악",
+    "unit": "리듬 표현",
+    "timeMinutes": 40,
+    "coreMessage": "장면과 리듬으로 활동 순서를 표현한다.",
+    "goals": [
+      "활동 순서를 장면으로 표현한다.",
+      "네 박자의 리듬으로 시작을 알린다."
+    ],
+    "icebreaker": "수업 시작을 네 박자로 표현해 볼까요?",
+    "activities": [
+      {
+        "name": "장면 순서 만들기",
+        "minutes": 12,
+        "instruction": "도입·활동·정리의 순서로 장면 세 개를 정하세요.",
+        "materials": "교사가 제공한 가상 장면 그림",
+        "example": "질문 그림 / 기록 그림 / 발표 그림",
+        "blank": "장면 / 제목 / 길이 빈 표",
+        "submitTo": "수업에서 정한 미디어 모음함",
+        "doneWhen": "각 장면에 제목과 순서가 있으면 완료"
+      },
+      {
+        "name": "시작 리듬 표현",
+        "minutes": 12,
+        "instruction": "네 박자의 시작 리듬을 만들고 장면과 연결하세요.",
+        "materials": "가상 멜로디와 반주 MIDI 예시",
+        "example": "첫 박에 손뼉을 치고 네 박을 센다.",
+        "blank": "박 / 소리 / 장면 빈 표",
+        "submitTo": "짝과 확인한 뒤 미디어 모음함",
+        "doneWhen": "네 박의 리듬과 장면의 시작이 연결되면 완료"
+      }
+    ],
+    "assessment": [
+      "장면 순서가 활동 순서와 맞는가?",
+      "리듬으로 시작을 표현했는가?"
+    ],
+    "differentiation": [
+      "악기 연주가 어려우면 손뼉이나 말 리듬으로 표현한다."
+    ],
+    "scenario": "media",
+    "title": "가상 리듬과 영상 수업",
+    "imagePath": "Input/authoring-observation.png"
+  }
+]

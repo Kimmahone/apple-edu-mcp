@@ -1,0 +1,41 @@
+name: Verify
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@08c6903cd8c0fde910a37f88322edcfb5dd907a8 # v5.0.0
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v5.0.0
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - run: npm test
+      - run: npm run test:distribution
+      - run: npm run build
+      - run: npm run test:mcp
+      - run: npm run release:check
+      - run: npm run release:build
+      - run: node scripts/release/test-package.mjs
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: candidate-installer
+          include-hidden-files: true
+          path: |
+            .local/release/*.tgz
+            .local/release/*.zip
+            .local/release/release-manifest.json
+            .local/release/SHA256SUMS
+          retention-days: 7

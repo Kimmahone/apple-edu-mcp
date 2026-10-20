@@ -1,0 +1,64 @@
+{
+  "name": "edu-apple-creator-mcp",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Local macOS MCP for editable Apple teaching materials; no paid Apple developer membership required",
+  "license": "MIT",
+  "engines": {
+    "node": ">=24"
+  },
+  "bin": {
+    "edu-apple-creator-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist",
+    "scripts/macos",
+    "scripts/connection-check.mjs",
+    "scripts/native-backup.mjs",
+    "scripts/distribution",
+    "README.md",
+    "LICENSE",
+    "SECURITY.md",
+    "THIRD_PARTY_NOTICES.md",
+    "licenses",
+    "docs",
+    "resources",
+    ".release/native-verification.json"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:mcp": "node scripts/mcp-smoke.mjs",
+    "test:mac": "node scripts/mac-integration.mjs",
+    "doctor": "node dist/cli.js doctor",
+    "check:connection": "node scripts/connection-check.mjs",
+    "backup:native": "node scripts/native-backup.mjs",
+    "test:iwork-v1": "node scripts/iwork-v1-acceptance.mjs",
+    "test:distribution": "node --test tests/distribution/*.test.mjs",
+    "release:build": "node scripts/release/build.mjs",
+    "release:check": "node scripts/release/check.mjs",
+    "verify:native": "node scripts/release/verify-native.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/client": "2.3.1",
+    "@modelcontextprotocol/server": "2.3.1",
+    "zod": "4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "26.6.5",
+    "typescript": "7.0.2",
+    "vitest": "5.0.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Kimmahone/apple-edu-mcp.git"
+  },
+  "homepage": "https://github.com/Kimmahone/apple-edu-mcp",
+  "bundledDependencies": [
+    "@modelcontextprotocol/client",
+    "@modelcontextprotocol/server",
+    "zod"
+  ]
+}

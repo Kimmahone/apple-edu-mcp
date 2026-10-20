@@ -1,0 +1,4 @@
+// Passive public permission API unless the host explicitly requests consent.
+ObjC.import('AppKit');ObjC.import('ApplicationServices');
+ObjC.bindFunction('AEDeterminePermissionToAutomateTarget',['int',['void *','unsigned int','unsigned int','bool']]);
+function run(argv){const ids={pixelmator:'com.apple.pixelmator',finalcut:'com.apple.FinalCutApp'},id=ids[argv[0]];if(!id||!['probe','request'].includes(argv[1]))throw Error('INVALID_TARGET');const apps=$.NSRunningApplication.runningApplicationsWithBundleIdentifier(id),running=Number(apps.count)>0;if(!running)return JSON.stringify({status:-600,running:false});const d=$.NSAppleEventDescriptor.descriptorWithBundleIdentifier(id),status=$.AEDeterminePermissionToAutomateTarget(d.aeDesc,0x2a2a2a2a,0x2a2a2a2a,argv[1]==='request');return JSON.stringify({status,running});}

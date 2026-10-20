@@ -1,0 +1,82 @@
+{
+  "schema": 1,
+  "version": "1.1.0",
+  "scope": "current_mac_iwork",
+  "verifiedAt": "2026-10-20T11:20:03.158Z",
+  "payloadSHA256": "dcb0338f6f37fa8e6e5b534e34b3b6232146b08a1cfd43eceba4c456803d85da",
+  "toolCount": 23,
+  "targets": [
+    {
+      "app": "pages",
+      "edition": "classic",
+      "version": "14.5",
+      "create": true,
+      "edit": true,
+      "save": true,
+      "reopen": true,
+      "idempotency": true,
+      "sourcePreserved": true
+    },
+    {
+      "app": "numbers",
+      "edition": "classic",
+      "version": "14.5",
+      "create": true,
+      "edit": true,
+      "save": true,
+      "reopen": true,
+      "idempotency": true,
+      "sourcePreserved": true
+    },
+    {
+      "app": "keynote",
+      "edition": "classic",
+      "version": "14.5",
+      "create": true,
+      "edit": true,
+      "save": true,
+      "reopen": true,
+      "idempotency": true,
+      "sourcePreserved": true
+    },
+    {
+      "app": "pages",
+      "edition": "creator_studio",
+      "version": "15.3.1",
+      "create": true,
+      "edit": true,
+      "save": true,
+      "reopen": true,
+      "idempotency": true,
+      "sourcePreserved": true
+    },
+    {
+      "app": "numbers",
+      "edition": "creator_studio",
+      "version": "15.2.1",
+      "create": true,
+      "edit": true,
+      "save": true,
+      "reopen": true,
+      "idempotency": true,
+      "sourcePreserved": true
+    },
+    {
+      "app": "keynote",
+      "edition": "creator_studio",
+      "version": "15.3.1",
+      "create": true,
+      "edit": true,
+      "save": true,
+      "reopen": true,
+      "idempotency": true,
+      "sourcePreserved": true
+    }
+  ],
+  "otherMacsVerified": false,
+  "configurationsWritten": false,
+  "interruptedTestCases": 1,
+  "manualPreflight": [
+    "classic 14.5 version notices were dismissed with Not Now; interrupted blank test and receipt were preserved."
+  ]
+}

@@ -1,0 +1,247 @@
+{
+  "updatedAt": "2026-10-19T05:40:42.211184Z",
+  "version": "1.1.0",
+  "scope": "현재 Mac의 iWork v1 + 공개 GitHub 설치·업데이트. 후속 창작 앱·다른 기기는 별도 검증.",
+  "next": [
+    "HOST-ALL",
+    "PG-BODY",
+    "KN-CHART",
+    "KN-MOTION",
+    "IW-GROUP",
+    "IW-DESIGN",
+    "FF-ELEMENTS",
+    "LG-MUSIC",
+    "ICLOUD-IPAD"
+  ],
+  "features": [
+    {
+      "id": "C14-OPEN",
+      "app": "core",
+      "title": "Numbers·Keynote14.5 파일 열기 원인 해소",
+      "implementation": "complete",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "구버전 안내는 지금 안 함. 14.5의 정확한 번들로 공개 open Apple 이벤트를 보내 UUID 사본의 실제 열린 경로 확인. Numbers의 Open 창 잔류를 재현한 뒤 회귀·Keynote/Pages 후속 시험 PASS. 재등장 안내의 자동 제거/설정 변경 없음"
+    },
+    {
+      "id": "IW-CANVAS",
+      "app": "core",
+      "title": "iWork 여러 표·글상자·도형·이미지·제한형 수식 제작/수정",
+      "implementation": "complete",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "문서의 고정 버전·기본 요소 범위. 앱 전체 UI 기능 완료 아님"
+    },
+    {
+      "id": "IW-TEMPLATE",
+      "app": "core",
+      "title": "Numbers·Keynote·Pages 템플릿 사본 편집",
+      "implementation": "partial",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "Numbers/Keynote 글·셀·그림·위치, Pages는 단일 구역 본문의 구간 교체·서체/크기/색. 6고정 대상 저장/재열기·원본 보존·중복 방지 PASS. 외부 Pages 객체는 조회/보존만"
+    },
+    {
+      "id": "IW-RANGE",
+      "app": "core",
+      "title": "혼합 서식 구간 교체·축약·삭제",
+      "implementation": "complete",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "기존 Numbers/Keynote 4대상에 Pages14.5·CS15.3.1 본문 구간 추가 PASS. 같은 서식 내용 교체, 완성 Unicode 문자 묶음/다중줄 내부; 문단·쪽·구역 변경 제외"
+    },
+    {
+      "id": "IW-STYLE",
+      "app": "core",
+      "title": "구간 서식·완성 유니코드 묶음·다중줄 안의 구간 편집",
+      "implementation": "complete",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "기존4대상 + Pages본문2대상. 문구 일부 서체·크기·색과 가족 이모지/결합 문자 전체 교체·재열기 PASS. 주변 공개 서식 보존; 문자 중간/모호한 문구/문단 변경 차단"
+    },
+    {
+      "id": "IW-GROUP",
+      "app": "core",
+      "title": "그룹 내부 안전한 요소 수정",
+      "implementation": "none",
+      "verification": "unsupported",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "그룹이 iWork container를 상속하며 조상 locked 계약이 공개 사전에 없음. 안전한 내부 수정은 보류, 조회/보존만. 모든 UI 경로가 불가능하다는 뜻은 아님"
+    },
+    {
+      "id": "PG-BODY",
+      "app": "pages",
+      "title": "Pages 본문·문단·쪽/구역·인쇄 검증",
+      "implementation": "partial",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "양 판 실제 본문/문단·쪽별 표/그림 제작에 더해 외부 저장본의 단일 구역 body 사본 구간·부분서식·Unicode 후속 수정/재열기/재생 PASS. 쪽 수·공개 객체·자산 대조. 고급 구역/머리말/목차/인쇄 품질 후속"
+    },
+    {
+      "id": "KN-CHART",
+      "app": "keynote",
+      "title": "Keynote 공개 차트 제작·편집",
+      "implementation": "partial",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "Creator Studio15.3.1 세로막대/막대에 더해 classic14.5·CS 선→원/값 수정·저장/재열기·재생 PASS. 원형 치수/계열 방향 결함 수정, 5:3:2 데이터 확인. 겹침 없는 새 가상 수정본2개도 PDF/원본/재생 PASS. 임의 외부 차트 수정/전체 UI 기능 아님"
+    },
+    {
+      "id": "KN-MOTION",
+      "app": "keynote",
+      "title": "Keynote 전환·모션 설정과 실제 재생",
+      "implementation": "partial",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "디졸브/닦아내기에 더해 classic14.5·CS Magic Move 속성/저장·재열기 PASS. 3.04초 영상4개 1/1.5/2초 프레임에서 그림 이동/크기 변화 확인. runtime motionPlaybackVerified=false 유지. 객체 빌드/전체 모션 품질 미지원"
+    },
+    {
+      "id": "IW-DESIGN",
+      "app": "core",
+      "title": "자유 도형 스타일·자르기/마스크",
+      "implementation": "none",
+      "verification": "unsupported",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "세 앱 shape/text의 background fill type은 읽기 전용, image 자르기/마스크 setter 미노출. 템플릿 디자인 보존/공개 위치 수정은 제공, 임의 디자인 변경 미지원"
+    },
+    {
+      "id": "FF-EMPTY",
+      "app": "freeform",
+      "title": "Freeform 빈 보드 생성·상태·중복 방지",
+      "implementation": "complete",
+      "verification": "manual_step",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "v1 이후 점진 업데이트 대상. 빈 보드/첫 열기. 내부 영구 ID/자동 재열기 미검증"
+    },
+    {
+      "id": "FF-ELEMENTS",
+      "app": "freeform",
+      "title": "Freeform 요소 제작·수정·자동 재접근",
+      "implementation": "none",
+      "verification": "unsupported",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "v1 이후 점진 업데이트 대상. 확인한 공개 동작에는 텍스트/도형 작성 없음. 파일 첨부는 별도 검토한 단축어가 필요해 미구현. 기존 빈 보드용2동작 유지"
+    },
+    {
+      "id": "PX-LAYERS",
+      "app": "pixelmator",
+      "title": "Pixelmator 레이어 원본 제작·수정·저장/재열기",
+      "implementation": "complete",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "v1 이후 점진 업데이트 대상. 사용자 승인으로 Pixelmator만 재시작. 공개 native .pxd 내보내기→5레이어/순서 대조, 제목·색·이미지 위치의 새 수정본 저장/닫기/재열기·MCP재연결·동일요청 파일/mtime 불변·충돌거절·PNG/편집화면 PASS. MCP 구조화 원본의 새 사본 범위; 임의 외부 PXD/고급 필터 미지원"
+    },
+    {
+      "id": "FC-TIMELINE",
+      "app": "finalcut",
+      "title": "Final Cut FCPXML 타임라인 제작·가져오기",
+      "implementation": "partial",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "v1 이후 점진 업데이트 대상. 정지 이미지3장면+한글제목, FCPXML1.14 DTD·수정/중복 방지. 새 가상 보관함에 한 번 수동 가져오기 후 닫기/재열기·3/5/3초·제목3·24fps PASS. MCP의 자동 가져오기/네이티브 저장은 아님"
+    },
+    {
+      "id": "LG-MUSIC",
+      "app": "logic",
+      "title": "Logic MIDI/MusicXML 제작·가져오기",
+      "implementation": "partial",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "v1 이후 점진 업데이트 대상. 기존 MIDI 실기에 더해 생성 MusicXML→새 .logicx와 별도 수정본·닫기/같은 파일 재열기 UI실기 PASS. 템포108→112·첫음64→67·멜로디8/반주24음·리전8마디 유지. 기본 빈 트랙/프로젝트 끝128마디는 별도. 자동 native MCP/음질 검증 아님. 이전 가상 프로젝트 Autosave 보조파일2개 복구 불가 예외를 v1 게이트에 기록"
+    },
+    {
+      "id": "EDU-TEMPLATES",
+      "app": "core",
+      "title": "교사용 가상 수업 시나리오·외부 교육과정 입력 규격",
+      "implementation": "complete",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "3종×3앱9원본 저장/재열기·재생 후 PDF36쪽 전체 검수(PDFKit). Numbers 제목 상자/표를 세로 배치로 고쳐 새3사본 제작·재열기/재생·PDF3쪽 검수 PASS. 교육과정 원문 진위·다른 출력 환경은 별도"
+    },
+    {
+      "id": "HOST-ALL",
+      "app": "core",
+      "title": "새 도구의 Claude·Codex·Antigravity 자연어 사용성",
+      "implementation": "partial",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "기존4호스트 신규7/구간4연산과 현재 채팅23개·runtime·신규7 직접 호출/기존 영수증3재생·충돌차단 PASS. 새 가이드의 App/IDE 가상2레이어 제작·별도 수정·저장/재열기·각2재생/4파일 SHA·크기·mtime 불변 PASS. App은 가이드를 새로 조회, IDE는 같은 대화의 앞선 새 가이드를 재사용. 보충 JSON 없음. 성공 GUI 원문/인수 대조 완료. 오류 GUI 원문은 숨김 상태, 모델 보고/정확한 인수의 현재채팅 확인과 구분 새 Pages body 스키마·Studio 전용 안내·오류 recovery는 새 빌드 stdio23에서 검증. 실제 Numbers14.5 열기 오류 안내/공개open 복구 PASS. 신규 본문 기능의 호스트별 GUI 자연어 시험과 Antigravity 큰 응답/실패 표시 한계는 후속."
+    },
+    {
+      "id": "ICLOUD-IPAD",
+      "app": "core",
+      "title": "선택 iCloud 저장·iPad 동기화",
+      "implementation": "none",
+      "verification": "manual_step",
+      "evidence": [],
+      "detail": "저장 대상 선택·다른 기기 실제 열기 필요. 동기화를 추정하지 않음"
+    },
+    {
+      "id": "UI-SITE",
+      "app": "core",
+      "title": "사이트·별도 편집 도우미",
+      "implementation": "none",
+      "verification": "held",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "사용자 지시로 계속 보류; 현재 구현 대상에서 제외"
+    },
+    {
+      "id": "V1-RELEASE",
+      "app": "core",
+      "title": "현재 Mac iWork 로컬 v1 마무리",
+      "implementation": "complete",
+      "verification": "app_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "사용자 확정 현재 Mac iWork 로컬 v1.0.0 완료. 격리 설치본6대상 새 가상 제작/수정/재열기/재생·120단위·기존1,671파일/설정 불변 PASS. 다른 Mac·교사 시험은 후속 환경 대기, 사이트/npm 공개 게시 보류. 전체7앱/UI 완료가 아님."
+    },
+    {
+      "id": "NATIVE-BACKUP",
+      "app": "core",
+      "title": "앱 실행 전 전체 가상 패키지 백업",
+      "implementation": "complete",
+      "verification": "format_verified",
+      "evidence": [
+        "docs/SUPPORT.md"
+      ],
+      "detail": "UUID Output 패키지 전체/숨긴 Autosave 복사, 전후 원본·사본 해시 대조. 실제 가상 Logic 저장 패키지 PASS. 앱 실행/미저장 세션 캡처/자동 복원/과거 파일 복구는 하지 않음"
+    }
+  ]
+}

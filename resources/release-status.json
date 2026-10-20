@@ -1,0 +1,60 @@
+{
+  "version": "1.1.0",
+  "status": "local_v1",
+  "scope": "current_mac_iwork",
+  "coreApps": [
+    "pages",
+    "numbers",
+    "keynote"
+  ],
+  "laterApps": [
+    "freeform",
+    "pixelmator",
+    "finalcut",
+    "logic"
+  ],
+  "supportedTargets": [
+    {
+      "app": "pages",
+      "edition": "classic",
+      "version": "14.5"
+    },
+    {
+      "app": "numbers",
+      "edition": "classic",
+      "version": "14.5"
+    },
+    {
+      "app": "keynote",
+      "edition": "classic",
+      "version": "14.5"
+    },
+    {
+      "app": "pages",
+      "edition": "creator_studio",
+      "version": "15.3.1"
+    },
+    {
+      "app": "numbers",
+      "edition": "creator_studio",
+      "version": "15.2.1"
+    },
+    {
+      "app": "keynote",
+      "edition": "creator_studio",
+      "version": "15.3.1"
+    }
+  ],
+  "externalValidation": "awaiting_environment",
+  "publicDistribution": "github",
+  "siteDeployment": "held",
+  "userConfirmedCurrentMacScope": true,
+  "notes": [
+    "현재 Mac의 iWork 검증 범위에 설치·검증된 업데이트 도우미를 추가한 공개 GitHub 배포판.",
+    "다른 Mac·iPad 실기는 환경 대기이며 사이트·npm 공개 게시와 별도 웹 스튜디오는 보류."
+  ],
+  "evidence": [
+    "docs/SUPPORT.md",
+    ".release/native-verification.json"
+  ]
+}
