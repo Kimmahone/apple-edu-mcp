@@ -3,7 +3,7 @@
   "version": "1.1.0",
   "scope": "current_mac_iwork",
   "verifiedAt": "2026-10-20T11:20:03.158Z",
-  "payloadSHA256": "72388ce84f791a8dbd8a3cc9dcbf647dade3ee9084115a56baa6563ced9ef220",
+  "payloadSHA256": "fe4545112c656fb549b7f4421808ba2f8cb42f1e6e8e1bcfe79df4494a1db4d1",
   "toolCount": 23,
   "targets": [
     {
@@ -78,5 +78,6 @@
   "interruptedTestCases": 1,
   "manualPreflight": [
     "classic 14.5 version notices were dismissed with Not Now; interrupted blank test and receipt were preserved."
-  ]
+  ],
+  "postAcceptanceDistributionChanges": "GitHub API JSON media type corrected; native source and dependency bytes unchanged from tested baseline 7bb629a; updater regression tests passed."
 }

@@ -99,7 +99,8 @@ async function writeGuide(root){
 }
 function trustedDownload(url){const u=new URL(url);if(u.origin!=='https://github.com'||!u.pathname.startsWith(`/${REPOSITORY}/releases/download/`)||u.search||u.hash)throw Error('허용되지 않은 배포 주소');return u.href;}
 export async function fetchBytes(url,limit,fetchImpl=fetch){
- const response=await fetchImpl(url,{headers:{Accept:'application/octet-stream','User-Agent':'Apple-Edu-MCP-Updater'},signal:AbortSignal.timeout(60000)});
+ const accept=new URL(url).origin==='https://api.github.com'?'application/vnd.github+json':'application/octet-stream';
+ const response=await fetchImpl(url,{headers:{Accept:accept,'User-Agent':'Apple-Edu-MCP-Updater'},signal:AbortSignal.timeout(60000)});
  if(!response.ok)throw Error(`다운로드 실패 (${response.status}). 네트워크와 공개 배포 상태를 확인하세요.`);
  if(Number(response.headers.get('content-length')??0)>limit)throw Error('배포 파일이 너무 큽니다.');
  const chunks=[];let size=0;for await(const chunk of response.body){size+=chunk.length;if(size>limit)throw Error('배포 파일이 너무 큽니다.');chunks.push(chunk);}return Buffer.concat(chunks);
